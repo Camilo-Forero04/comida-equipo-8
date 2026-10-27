@@ -1,29 +1,64 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/CSS/styles.css" />
-  </head>
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/JS/app.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/CSS/styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--primary);">
+    <div class="container">
+
+      <!--LOGO: nombre de la tienda, lleva a la página de inicio-->
+      <a class="navbar-brand fw-bold" href="index.html" style="font-family: var(--font-title); color: var(--accent);">
+        Miga de Casa
+      </a>
+
+      <!--BOTÓN solo aparece en celular. Al tocarlo, abre o cierra el -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!--MENÚ: el id debe coincidir con data-bs-target del botón-->
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+
+        <!-- Enlaces a las páginas del sitio-->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link text-nowrap" href="catalogo.html">El menú</a></li>
+          <li class="nav-item"><a class="nav-link text-nowrap" href="sobre_nosotros.html">Nuestra Historia</a></li>
+          <li class="nav-item"><a class="nav-link text-nowrap" href="contacto.html">Cómo pedir</a></li>
+        </ul>
+
+        <!-- CARRITO DE COMPRAS lleva al carrito, con un contador de productos-->
+
+        <a href="#carrito" class="nav-link position-relative">
+          <i class="bi bi-cart3"></i>
+          <span id="contadorCarrito" class="badge bg-danger">0</span>
+        </a>
+
+        <!-- BOTÓN PRINCIPAL: lleva al catálogo para pedir-->
+        <a href="catalogo.html" class="btn text-nowrap ms-lg-3" style="background-color: var(--accent); color: var(--primary);">
+          Haz tu pedido
+        </a>
+
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="/JS/app.js"></script>
+</body>
+
 </html>
