@@ -29,6 +29,51 @@
   <body class="d-flex flex-column min-vh-100">
     <!-- NAVBAR: lo hace otro compañero -->
 
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--primary);">
+    <div class="container">
+
+      <!-- LOGO: nombre de la tienda, lleva a la página de inicio -->
+      <a class="navbar-brand fw-bold" href="index.html" style="font-family: var(--font-title); color: var(--accent);">
+        Miga de Casa
+      </a>
+
+      <!-- BOTÓN abre o cierra el menú -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENÚ: el id debe coincidir con data-bs-target del botón -->
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+
+        <!-- Enlaces a las páginas del sitio -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link text-nowrap" href="catalogo.html">El menú</a></li>
+          <li class="nav-item"><a class="nav-link text-nowrap" href="sobre-nosotros.html">Nuestra historia</a></li>
+          <li class="nav-item"><a class="nav-link text-nowrap" href="contacto.html">Cómo pedir</a></li>
+        </ul>
+
+        <!-- CARRITO: ícono con contador de productos -->
+      <div class="nav-item dropdown ms-3">
+        <a class="nav-link position-relative text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contadorCarrito" class="badge bg-danger position-absolute top-0 start-100 translate-middle d-none">0</span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end shadow" id="listaCarrito" style="min-width: 250px;">
+        <!-- Aquí se inyectarán los items del carrito desde JS -->
+      </ul>
+    </div>
+
+        <!-- BOTÓN PRINCIPAL: lleva al catálogo para pedir -->
+        <a href="catalogo.html" class="btn text-nowrap ms-lg-3"
+          style="background-color: var(--accent); color: var(--primary);">
+          Haz tu pedido
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
     <main class="container py-5 flex-grow-1" id="contenido">
       <!-- HERO -->
       <section class="hero" aria-labelledby="titulo-hero">

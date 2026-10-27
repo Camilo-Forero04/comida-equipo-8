@@ -250,23 +250,24 @@ function filtrarCategoria(categoriaProducto){
 }
 
 //Evento de clicks
-filtro.addEventListener("click", e =>{
+if (filtro) {
+    filtro.addEventListener("click", e => {
+        if(e.target.tagName === "BUTTON"){
+            document.querySelectorAll("#filtros-categoria .btn").forEach(btn => btn.classList.remove("active"));
+            e.target.classList.add("active");
 
-    //console.log("hizo click");
-    
-    if(e.target.tagName === "BUTTON"){
-        //Cambiar clase active a boton seleccionado
-        document.querySelectorAll("#filtros-categoria .btn").forEach(btn => btn.classList.remove("active"));
-        e.target.classList.add("active");
+            const categoria = e.target.dataset.categoria;
+            filtrarCategoria(categoria);
+        }
+    });
+}
 
-        //Obtener la categoria seleccionada
-        const categoria = e.target.dataset.categoria;
-        filtrarCategoria(categoria);
+document.addEventListener("DOMContentLoaded", () => {
+    if(menu){
+          mostrarCarta(); //valida si estamos en menu para pintarlo solo en menu y que no haya error
     }
-
-})
-
-document.addEventListener("DOMContentLoaded", ()=> mostrarCarta());
+    mostrarCarrito(); 
+});
 
 // Clave con la que se guarda el carrito en localStorage
 const CLAVE_CARRITO = "carritoMigaDeCasa";
@@ -298,6 +299,9 @@ function mostrarCarrito() {
     const lista = document.getElementById("listaCarrito");
     const contador = document.getElementById("contadorCarrito");
     
+    if (!lista || !contador){
+        return;
+    } 
 
     lista.textContent = "";
 
@@ -330,4 +334,17 @@ function mostrarCarrito() {
     contador.classList.remove("d-none");
 }
 
+if (menu) {
+menu.addEventListener("click", (e) => {
+    const boton = e.target.closest(".agregar"); // Asegura capturar el botón aunque se haga clic en el ícono
+    if (boton) {
+        const idProducto = parseInt(boton.dataset.id);
+        const producto = carta.find(p => p.id === idProducto);
+        
+        if (producto) {
+            agregarAlCarrito(producto.nombre, producto.precio);
+        }
+    }
+});
+}
 
