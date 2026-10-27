@@ -13,9 +13,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
   <link rel="stylesheet" href="../CSS/styles.css" />
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--primary);">
     <div class="container">
@@ -59,7 +63,8 @@
 
   <!--Menu-->
   <!-- Carta: JavaScript la llena con los productos -->
-  <div class="container my-5">
+   <main class="container py-5 flex-grow-1">
+  <div>
     <h2 class="fw-bold mb-4">Nuestro Menú</h2>
 
     <div class="d-flex flex-wrap gap-2 justify-content-center mb-4" id="filtros-categoria">
@@ -74,6 +79,8 @@
     <!--Se mostraran los datos del menú por JS-->
     <div id="menu" class="row g-4"></div>
   </div>
+  
+  </main>
 
 
 
@@ -84,7 +91,7 @@
       <div class="row">
         <div class="col-12 col-md-4 mb-3 mb-md-0">
           <a href="/HTML/index.html" class="text-decoration-none d-inline-block">
-            <h4 class="fw-bolder accent">CASA DE MIGA</h4>
+            <h4 class="fw-bolder accent">MIGA DE CASA</h4>
           </a>
           <p class="mb-0 fw-semibold">
             Representando la comida típica colombiana
@@ -129,7 +136,7 @@
       <div class="row">
         <div class="col-12 text-center text-md-start">
           <p class="mb-0">
-            &copy; 2026 Casa de Miga. Todos los derechos reservados.
+            &copy; 2026 Miga de Casa. Todos los derechos reservados.
           </p>
         </div>
       </div>
