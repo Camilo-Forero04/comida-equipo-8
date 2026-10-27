@@ -61,6 +61,19 @@ h6 {
   padding: 0px 7px;
 }
 
+.btn-filtro{
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #000000;
+}
+
+.btn-filtro:hover{
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #000000;
+}
+
+
 footer {
   background-color: var(--primary);
 }
