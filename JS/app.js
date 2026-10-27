@@ -268,3 +268,66 @@ filtro.addEventListener("click", e =>{
 
 document.addEventListener("DOMContentLoaded", ()=> mostrarCarta());
 
+// Clave con la que se guarda el carrito en localStorage
+const CLAVE_CARRITO = "carritoMigaDeCasa";
+
+// Carrito: lista de productos
+let carrito = JSON.parse(localStorage.getItem(CLAVE_CARRITO)) || [];
+
+// Guarda el carrito en localStorage
+function guardarCarrito() {
+    localStorage.setItem(CLAVE_CARRITO, JSON.stringify(carrito));
+}
+
+// Agrega un producto al carrito, lo guarda y vuelve a pintar
+function agregarAlCarrito(nombre, precio) {
+    carrito.push({ nombre: nombre, precio: precio });
+    guardarCarrito();
+    mostrarCarrito();
+}
+
+// Quita un producto por su posición
+function eliminarDelCarrito(posicion) {
+    carrito.splice(posicion, 1);
+    guardarCarrito();
+    mostrarCarrito();
+}
+
+// Dibuja la lista del carrito y actualiza el contador del navbar
+function mostrarCarrito() {
+    const lista = document.getElementById("listaCarrito");
+    const contador = document.getElementById("contadorCarrito");
+    
+
+    lista.textContent = "";
+
+    if (carrito.length === 0) {
+        const vacio = document.createElement("li");
+        vacio.className = "dropdown-item text-muted";
+        vacio.textContent = "Tu carrito está vacío";
+        lista.appendChild(vacio);
+        contador.classList.add("d-none");
+        return;
+    }
+
+    for (let i = 0; i < carrito.length; i++) {
+        const item = document.createElement("li");
+        item.className = "dropdown-item d-flex justify-content-between align-items-center";
+        item.textContent = carrito[i].nombre + " - $" + carrito[i].precio;
+
+        const boton = document.createElement("button");
+        boton.className = "btn btn-sm btn-outline-danger ms-2";
+        boton.textContent = "Quitar";
+        boton.addEventListener("click", function () {
+            eliminarDelCarrito(i);
+        });
+
+        item.appendChild(boton);
+        lista.appendChild(item);
+    }
+
+    contador.textContent = carrito.length;
+    contador.classList.remove("d-none");
+}
+
+
