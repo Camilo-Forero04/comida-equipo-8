@@ -186,8 +186,7 @@ const carta = [
     }
 ];
 
-
-
+//Menu
 
 //Elementos de la pagina
 const menu = document.querySelector("#menu");
@@ -239,6 +238,7 @@ function mostrarCarta(listaproducto = carta) {
     menu.innerHTML =html;
 }
 
+//Filtrar por categoría
 function filtrarCategoria(categoriaProducto){
     if (categoriaProducto === "todos") {
         mostrarCarta(carta);
@@ -267,6 +267,4 @@ filtro.addEventListener("click", e =>{
 })
 
 document.addEventListener("DOMContentLoaded", ()=> mostrarCarta());
-
-
 
