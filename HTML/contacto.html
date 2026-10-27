@@ -11,19 +11,293 @@
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/CSS/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
-  <body>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+  <body class="d-flex flex-column min-vh-100">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: var(--primary)"
+    >
+      <div class="container">
+        <!-- LOGO: nombre de la tienda, lleva a la página de inicio -->
+        <a
+          class="navbar-brand fw-bold"
+          href="index.html"
+          style="font-family: var(--font-title); color: var(--accent)"
+        >
+          Miga de Casa
+        </a>
+
+        <!-- BOTÓN abre o cierra el menú -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENÚ: el id debe coincidir con data-bs-target del botón -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <!-- Enlaces a las páginas del sitio -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link text-nowrap" href="catalogo.html">El menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-nowrap" href="sobre_nosotros.html"
+                >Nuestra historia</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-nowrap" href="contacto.html"
+                >Cómo pedir</a
+              >
+            </li>
+          </ul>
+
+          <!-- CARRITO: ícono con contador de productos -->
+          <a href="#carrito" class="nav-link position-relative">
+            <i class="bi bi-cart3"></i>
+            <span id="contadorCarrito" class="badge bg-danger">0</span>
+          </a>
+
+          <!-- BOTÓN PRINCIPAL: lleva al catálogo para pedir -->
+          <a
+            href="catalogo.html"
+            class="btn text-nowrap ms-lg-3"
+            style="background-color: var(--accent); color: var(--primary)"
+          >
+            Haz tu pedido
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-5 flex-grow-1">
+      <!--CTA mas info-->
+      <section class="row g-5 align-items-start pt-5">
+        <div class="col-lg-5">
+          <h1 class="mb-4">Hablemos</h1>
+          <h5 class="mb-4">
+            ¿Tienes hambre, quieres comer rico o trabajar con nosotros? Escríbenos y te respondemos lo
+            antes posible.
+          </h5>
+
+          <div class="dato-contacto">
+            <div class="d-flex flex-column align-items-center gap-2">
+              <i class="fa-solid fa-phone display-3 accent"></i>
+              <p>Teléfono <span class="fw-bold">+57 312 345 6780</span></p>
+            </div>
+          </div>
+
+            <div class="dato-contacto">
+              <div class="d-flex flex-column align-items-center gap-2">
+                <i class="fa-solid fa-envelope display-3 accent"></i>
+                <p>Correo <span class="fw-bold">contacto@migadecasa.com</span></p>
+              </div>
+            </div>
+              <div class="d-flex flex-column align-items-center gap-2">
+                <i class="fa-solid fa-bolt display-3 accent"></i>
+                <p>Tiempo de respuesta <span class="fw-bold">Inmediato, menos de 2 minutos</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Formulario-->
+        <div class="col-11 col-lg-7 form rounded-5 py-4 m-auto">
+          <article>
+            <header>
+              <div>
+                <i class="bi bi-chat-dots"></i>
+              </div>
+              <div>
+                <h2 class="accent">¿Un tintico y hablamos?</h2>
+              </div>
+            </header>
+
+            <form
+              id="formulario"
+              action="https://formspree.io/f/mljjbvbl"
+              method="POST"
+              novalidate
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo mensaje desde miga de casa"
+              />
+
+              <fieldset>
+                <div class="row g-3">
+                  <div class="col-md-6 position-relative">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Ej: Miguel Alexander Jimmy Villalobos"
+                      required
+                    />
+                    <div class="invalid-feedback accent">
+                      Ingresa tu nombre y apellido (solo letras).
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 position-relative">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input
+                      class="form-control"
+                      type="tel"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="Ej: 312 345 6780"
+                    />
+                    <div class="invalid-feedback accent">
+                      Ingresa un número válido (solo números).
+                    </div>
+                  </div>
+
+                  <div class="col-12 position-relative">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Ej: tucorreo@ejemplo.com"
+                      required
+                    />
+                    <div class="invalid-feedback accent">
+                      Ingresa un correo válido (ej: nombre@correo.com).
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset>
+                <legend class="mb-2 ">Mensaje</legend>
+
+                <textarea
+                  class="form-control"
+                  id="mensaje"
+                  name="mensaje"
+                  placeholder="Ej: Soy changua lover de corazón"
+                  required
+                ></textarea>
+                <div class="invalid-feedback accent">
+                  El mensaje debe ser más largo
+                </div>
+              </fieldset>
+
+              <button type="submit" class="btn btn-primary rounded-5 accent-container fw-bolder px-5 py-2 mt-3 mb-2">Enviar</button>
+              <p class="fw-light small">Tus datos solo se usan para responderte</p>
+            </form>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!--Icono whatsapp-->
+    <a
+      href="https://www.whatsapp.com/"
+      class="position-fixed bottom-0 end-0 m-4 z-3"
+    >
+      <i class="fa-brands fa-whatsapp fs-1"></i>
+    </a>
+
+    <!--Footer-->
+    <footer>
+      <div class="container mt-4 py-3">
+        <!--Marca info-->
+        <div class="row">
+          <div class="col-12 col-md-4 mb-3 mb-md-0">
+            <a
+              href="/HTML/index.html"
+              class="text-decoration-none d-inline-block"
+            >
+              <h4 class="fw-bolder accent">MIGA DE CASA</h4>
+            </a>
+            <p class="mb-0 fw-semibold">
+              Representando la comida típica colombiana
+            </p>
+            <p><i>| "Nací por mi madre, moriré por la changua".</i></p>
+          </div>
+          <!--CTA-->
+          <div
+            class="col-12 col-md-4 d-flex flex-column align-items-center gap-3 mb-2"
+          >
+            <h5 class="text-center mb-0">HAZ TU PEDIDO AQUÍ</h5>
+            <a
+              href="/HTML/catalogo.html"
+              class="btn btn-primary rounded-5 accent-container fw-bolder px-5 py-2"
+            >
+              Hacer Pedido
+            </a>
+          </div>
+          <!--Redes-->
+          <div
+            class="col-12 col-md-4 d-flex flex-column align-items-start align-items-md-end gap-2"
+          >
+            <h5>REDES SOCIALES</h5>
+            <ul class="list-unstyled d-flex justify-content-md-end gap-3 m-0">
+              <li class="text-center">
+                <a
+                  href="https://www.facebook.com/"
+                  class="text-decoration-none d-inline-block"
+                >
+                  <i class="fa-brands fa-facebook fs-1 accent"></i>
+                  <p class="fw-medium">Facebook</p>
+                </a>
+              </li>
+              <li class="text-center">
+                <a
+                  href="https://www.instagram.com/"
+                  class="text-decoration-none d-inline-block"
+                >
+                  <i class="fa-brands fa-instagram fs-1 accent"></i>
+                  <p class="fw-medium">Instagram</p>
+                </a>
+              </li>
+              <li class="text-center">
+                <a
+                  href="https://www.tiktok.com/"
+                  class="text-decoration-none d-inline-block"
+                >
+                  <i class="fa-brands fa-tiktok fs-1 accent"></i>
+                  <p class="fw-medium">Tiktok</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--Copy-->
+      <div class="container mt-4">
+        <div class="row">
+          <div class="col-12 text-center text-md-start">
+            <p class="mb-0">
+              &copy; 2026 Miga de Casa. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/JS/app.js"></script>
+    <script src="/JS/validacion-formulario.js"></script>
   </body>
 </html>
