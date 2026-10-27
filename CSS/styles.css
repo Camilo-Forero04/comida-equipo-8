@@ -45,8 +45,12 @@ h6 {
     padding: 14px 10px;
   }
 
-footer {
+footer, .form {
   background-color: var(--primary);
+}
+
+.form{
+ color: var(--bg);
 }
 
 footer p,
@@ -72,7 +76,8 @@ footer h5 {
   color: var(--accent); 
 }
 
-footer a {
+footer a,
+footer h5 {
   transition: all 0.3s ease;
 }
 
@@ -84,7 +89,11 @@ footer a:hover p {
   color: var(--accent);
 }
 
-footer h5 {
-  transition: all 0.3s ease;
+.fa-whatsapp{
+  color: #25D366;
+   transition: all 0.3s ease;
 }
 
+.fa-whatsapp:hover{
+  transform: scale(1.15);
+}
