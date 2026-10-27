@@ -30,20 +30,20 @@ h6 {
 /*INDEX*/
 /*banner-hero*/
 .hero-banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('../ASSETS/IMG/COLOMBIA.jpg') center/cover no-repeat;
-    color: white;
-    padding: 100px 0;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../ASSETS/IMG/COLOMBIA.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 0;
+}
 
-  /*Abajo del banner*/
+/*Abajo del banner*/
+.info-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 10px;
+}
 
-  .info-prev{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 10px;
-  }
 
 footer {
   background-color: var(--primary);
@@ -62,14 +62,15 @@ footer h5 {
 .btn-primary {
   background-color: var(--accent);
   border: solid 2px var(--accent);
-  color: #000000; /* Asumiendo que tu acento es amarillo, el texto negro da contraste */
+  color: #000000;
+  /* Asumiendo que tu acento es amarillo, el texto negro da contraste */
   transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: transparent; 
-  border-color: var(--accent); 
-  color: var(--accent); 
+  background-color: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 footer a {
@@ -87,4 +88,3 @@ footer a:hover p {
 footer h5 {
   transition: all 0.3s ease;
 }
-
