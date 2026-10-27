@@ -1,25 +1,63 @@
-:root{
-    --bg: #CFDBD5;
-    --primary: #242423;
-    --secundary: #333533;
-    --accent: #F5CB5C;
-    --font-title: "Oswald", sans-serif;
-    --font-text: "Open Sans", sans-serif;
+:root {
+  --bg: #cfdbd5;
+  --primary: #242423;
+  --secundary: #333533;
+  --accent: #f5cb5c;
+  --font-title: "Oswald", sans-serif;
+  --font-text: "Open Sans", sans-serif;
 }
 
-body{
-    background-color: var(--bg);
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+body {
+  background-color: var(--bg);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-p{
-    font-family: var(--font-text);
+p {
+  font-family: var(--font-text);
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: var(--font-title);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-title);
 }
 
 /*INDEX*/
@@ -39,3 +77,47 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     padding: 14px 10px;
   }
+
+footer {
+  background-color: var(--primary);
+}
+
+footer p,
+footer h4,
+footer h5 {
+  color: var(--bg);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border: solid 2px var(--accent);
+  color: #000000; /* Asumiendo que tu acento es amarillo, el texto negro da contraste */
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: transparent; 
+  border-color: var(--accent); 
+  color: var(--accent); 
+}
+
+footer a {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  transform: scale(1.15);
+}
+
+footer a:hover p {
+  color: var(--accent);
+}
+
+footer h5 {
+  transition: all 0.3s ease;
+}
+
