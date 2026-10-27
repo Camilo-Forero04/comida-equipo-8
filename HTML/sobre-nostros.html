@@ -1,143 +1,187 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="es">
-
   <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Sobre Nosotros - Miga de casa</title>
-
+    <title>Nosotros | Miga de Casa</title>
+    <meta
+      name="description"
+      content="Conoce la historia de Miga de Casa: comida colombiana hecha con recetas de familia, ingredientes de plaza y fuego lento."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wg…
-
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
-
     />
-
     <link
-
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-
       rel="stylesheet"
-
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-
       crossorigin="anonymous"
-
     />
-
-    <link rel="stylesheet" href="/CSS/styles.css" />
-
+    <link rel="stylesheet" href="../CSS/styles.css" />
   </head>
-
   <body>
+    <!-- NAVBAR: lo hace otro compañero -->
 
-
-
-    <!-- ================= CONTENIDO PRINCIPAL: SOBRE NOSOTROS ================= -->
-
-    <main class="container my-5">
-
-      <!-- Sección de presentación -->
-
-      <section class="row align-items-center py-4">
-
-        <div class="col-lg-6 mb-4 mb-lg-0">
-
-          <h1 class="display-5 fw-bold text-dark mb-3" style="font-family: 'Oswald', sans-serif;">Nuestra Esencia y Tradición</h1>
-
-          <p class="lead text-muted" style="font-family: 'Open Sans', sans-serif;">
-
-            En cada plato recopilamos la herencia, el color y la alegría de la gastronomía colombiana.
-
-          </p>
-
-          <p class="text-secondary" style="font-family: 'Open Sans', sans-serif;">
-
-            Trabajamos con ingredientes frescos seleccionados cuidadosamente de productores locales, garantizando calidad superior en cada receta tradicional de nuestra tierra colombiana.
-
-          </p>
-
+    <main id="contenido">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="titulo-hero">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <h1 id="titulo-hero" class="hero-title">
+                La comida de casa sabe distinto porque se hace <span class="resaltado">sin afán</span>
+              </h1>
+              <p class="hero-lead">
+                Miga de Casa es una cocina colombiana que cocina como se cocina en la familia:
+                con sofrito de verdad, ollas grandes y la puerta abierta para el que llegue con hambre.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a class="btn btn-mc btn-mc-gold" href="/index.html#menu">Ver el menú</a>
+                <a class="btn btn-mc btn-mc-outline" href="#historia">Leer nuestra historia</a>
+              </div>
+            </div>
+            <div class="col-lg-5">
+            <figure class="figure w-100 mb-0">
+             <img src="https://www.revistapancaliente.co/wp-content/uploads/2024/09/Restaurantes_acogedores_colombia.jpg" alt="Foto de la cocina de Miga de Casa" class="img-fluid rounded-4 shadow w-100">
+            <figcaption class="figure-caption text-center mt-2" style="font-family: var(--font-text);">Miga de Casa</figcaption>
+             </figure>
+              </div>
+          </div>
         </div>
-
-        <div class="col-lg-6 text-center">
-
-          <img src="https://www.revistapancaliente.co/wp-content/uploads/2024/09/Restaurantes_acogedores_colombia.jpg"
-
-               alt="Platillos colombianos" class="img-fluid rounded-4 shadow-lg">
-
-        </div>
-
       </section>
 
+      <div class="mantel" aria-hidden="true"></div>
 
-
-      <!-- Sección de Valores -->
-
-      <section class="row text-center my-5 g-4">
-
-        <div class="col-md-4">
-
-          <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
-
-            <h3 class="h4 fw-bold text-dark" style="font-family: 'Oswald', sans-serif;">Tradición</h3>
-
-            <p class="text-muted mb-0" style="font-family: 'Open Sans', sans-serif;">Recetas autóctonas preparadas con el auténtico sazón de casa.</p>
-
+      <!-- HISTORIA -->
+      <section id="historia" class="section" aria-labelledby="titulo-historia">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <h2 id="titulo-historia" class="section-title">
+                Empezó con una olla grande y mucha gente en la mesa
+              </h2>
+            </div>
+            <div class="col-lg-6 offset-lg-1 prose">
+              <p>
+                Todo comenzó en una cocina familiar, donde los domingos se hacía sancocho para quince
+                personas y siempre sobraba un plato para el vecino. De ahí viene el nombre: la miga es
+                lo que queda en la mesa después de compartir, y es lo que más se recuerda.
+              </p>
+              <p>
+                Hoy seguimos cocinando igual. Las recetas son las que nos enseñaron la abuela y la
+                mamá, el ají se prepara cada mañana y los fríjoles se cuecen el tiempo que necesiten,
+                no el que nos convenga.
+              </p>
+              <p>
+                No inventamos platos raros. Hacemos bien los que ya conoces: la bandeja paisa, el
+                ajiaco, las arepas, las empanadas y todo lo que te recuerda a casa.
+              </p>
+            </div>
           </div>
-
         </div>
-
-        <div class="col-md-4">
-
-          <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
-
-            <h3 class="h4 fw-bold text-dark" style="font-family: 'Oswald', sans-serif;">Calidad</h3>
-
-            <p class="text-muted mb-0" style="font-family: 'Open Sans', sans-serif;">Ingredientes frescos y de primera calidad en cada entrega.</p>
-
-          </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-          <div class="p-4 border rounded-4 h-100 bg-light shadow-sm">
-
-            <h3 class="h4 fw-bold text-dark" style="font-family: 'Oswald', sans-serif;">Pasión</h3>
-
-            <p class="text-muted mb-0" style="font-family: 'Open Sans', sans-serif;">Comprometidos con llevar alegría y sabor a cada hogar.</p>
-
-          </div>
-
-        </div>
-
       </section>
 
+      <!-- VALORES -->
+      <section class="section section-soft" aria-labelledby="titulo-valores">
+        <div class="container">
+          <h2 id="titulo-valores" class="section-title mb-5">Cómo cocinamos</h2>
+          <dl class="valores">
+            <div class="valor row g-3">
+              <dt class="col-md-4">Ingredientes de aquí</dt>
+              <dd class="col-md-8">
+                Compramos en plaza de mercado y a productores locales: maíz, plátano, papa criolla,
+                cilantro y hierbas frescas. Lo que no está en temporada, no sale en el plato.
+              </dd>
+            </div>
+            <div class="valor row g-3">
+              <dt class="col-md-4">Recetas sin atajos</dt>
+              <dd class="col-md-8">
+                El hogao se hace a fuego lento, los caldos se cuecen horas y nada viene de sobra.
+                Si una receta lleva tiempo, le damos el tiempo.
+              </dd>
+            </div>
+            <div class="valor row g-3">
+              <dt class="col-md-4">Una mesa para todos</dt>
+              <dd class="col-md-8">
+                Porciones generosas, precios justos y un trato de casa. Aquí nadie se va con hambre
+                ni sintiéndose cliente número veinte, siempre number one.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- PROCESO (secuencia real, por eso va numerado) -->
+      <section class="section section-dark" aria-labelledby="titulo-proceso">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <h2 id="titulo-proceso" class="section-title">De la plaza a tu mesa</h2>
+              <p class="on-dark-text">
+                Cuatro pasos que repetimos todos los días, sin saltarnos ninguno.
+              </p>
+            </div>
+            <div class="col-lg-8">
+              <ol class="proceso">
+                <li>
+                  <h3>Compramos temprano</h3>
+                  <p>Vamos a la plaza antes de que abra el restaurante y elegimos lo del día.</p>
+                </li>
+                <li>
+                  <h3>Cocinamos a fuego lento</h3>
+                  <p>Sofritos, caldos y frijoles toman su tiempo. Ahí está el sabor.</p>
+                </li>
+                <li>
+                  <h3>Preparamos por tandas</h3>
+                  <p>Cocinamos en cantidades pequeñas para que todo llegue recién hecho.</p>
+                </li>
+                <li>
+                  <h3>Servimos caliente</h3>
+                  <p>Del fogón al plato, o a tu casa bien empacado y todavía humeando.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CITA -->
+      <section class="section" aria-label="Palabras de la fundadora">
+        <div class="container">
+          <figure class="cita">
+            <blockquote>
+              <p>
+                Nuestra meta es que cuando alguien pruebe nuestra comida diga &ldquo;esto sabe a la casa de
+                mi abuela&rdquo;. Si lo dice, todo valió la pena.
+              </p>
+            </blockquote>
+            <figcaption>Camilo, Natalia, Jimmy, Miguel. Fundadores de Miga de Casa</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta" aria-labelledby="titulo-cta">
+        <div class="container text-center">
+          <h2 id="titulo-cta" class="cta-title">Siéntate, que ya está servido</h2>
+          <p class="cta-text">Mira lo que cocinamos hoy o escribenos para reservar tu cupo el dia de hoy.</p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a class="btn btn-mc btn-mc-gold" href="/index.html#menu">Ver el menú</a>
+            <a class="btn btn-mc btn-mc-outline" href="/index.html#contacto">Escribirnos</a>
+          </div>
+        </div>
+      </section>
     </main>
-
-
+    <!-- FOOTER: lo hace otro compañero -->
 
     <script
-
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-
       crossorigin="anonymous"
-
     ></script>
-
     <script src="/JS/app.js"></script>
-
   </body>
-
 </html>
