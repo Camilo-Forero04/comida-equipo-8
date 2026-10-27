@@ -21,3 +21,21 @@ p{
 h1, h2, h3, h4, h5, h6{
     font-family: var(--font-title);
 }
+
+/*INDEX*/
+/*banner-hero*/
+.hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../ASSETS/IMG/COLOMBIA.jpg') center/cover no-repeat;
+    color: white;
+    padding: 100px 0;
+  }
+
+  /*Abajo del banner*/
+
+  .info-prev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 10px;
+  }
