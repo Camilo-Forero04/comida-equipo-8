@@ -31,19 +31,35 @@ h6 {
 /*banner-hero*/
 .hero-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../ASSETS/IMG/COLOMBIA.jpg') center/cover no-repeat;
+    url('https://i.pinimg.com/1200x/2c/80/ad/2c80ad787e1e9fc1e59ca944f91ddb23.jpg') center/cover no-repeat;
   color: white;
   padding: 100px 0;
 }
 
+.titulo-sabor{
+  font-family: var(--font-title);
+}
+
+.subtitulo-sabor{
+  font-family: var(--font-text);
+}
+
 /*Abajo del banner*/
 .info-prev {
+  font-family: var(--font-title);
+  color: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 14px 10px;
 }
+.btn-carrusel{
+  background-color: var(--accent);
+}
 
+.img-carrusel-comida{
+  padding: 0px 7px;
+}
 
 footer {
   background-color: var(--primary);
