@@ -17,6 +17,47 @@
 </head>
 
 <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--primary);">
+    <div class="container">
+
+      <!-- LOGO: nombre de la tienda, lleva a la página de inicio -->
+      <a class="navbar-brand fw-bold" href="index.html" style="font-family: var(--font-title); color: var(--accent);">
+        Miga de Casa
+      </a>
+
+      <!-- BOTÓN abre o cierra el menú -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENÚ: el id debe coincidir con data-bs-target del botón -->
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+
+        <!-- Enlaces a las páginas del sitio -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link text-nowrap" href="catalogo.html">El menú</a></li>
+          <li class="nav-item"><a class="nav-link text-nowrap" href="sobre_nosotros.html">Nuestra historia</a></li>
+          <li class="nav-item"><a class="nav-link text-nowrap" href="contacto.html">Cómo pedir</a></li>
+        </ul>
+
+        <!-- CARRITO: ícono con contador de productos -->
+        <a href="#carrito" class="nav-link position-relative">
+          <i class="bi bi-cart3"></i>
+          <span id="contadorCarrito" class="badge bg-danger">0</span>
+        </a>
+
+        <!-- BOTÓN PRINCIPAL: lleva al catálogo para pedir -->
+        <a href="catalogo.html" class="btn text-nowrap ms-lg-3"
+          style="background-color: var(--accent); color: var(--primary);">
+          Haz tu pedido
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
   <!-- BANNER INICIO -->
   <div class="hero-banner text-center">
     <div class="container">
