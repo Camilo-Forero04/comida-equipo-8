@@ -260,6 +260,7 @@ h1, h2, h3, h4, h5, h6{
     color: var(--bg);
     border-color: var(--primary);
     transform: translateY(-2px);
+} /* <--- ¡Aquí faltaba cerrar la llave! */
 
 body {
   background-color: var(--bg);
