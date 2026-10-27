@@ -8,6 +8,6 @@
 
 ### Camilo Forero
 
-### Miga de Casa
+## Miga de Casa
 
 Landing page para representar la comida típica colombiana 💛💙❤️
